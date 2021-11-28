@@ -48,7 +48,7 @@ function draw() {
   player.checkBoundaryCollision();
   player.checkCollision(puck);
 
-  mouseSpeed = abs(mouseX - pmouseX);
+  mouseSpeed = abs(mouseX - pmouseX) + 2;
 }
 
 windowResized = function () {
