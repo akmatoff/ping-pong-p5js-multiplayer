@@ -4,6 +4,17 @@ const socket = io("http://localhost:5000")
 
 socket.on('gameState', updateGameState)
 
+function newGame() {
+  socket.emit('newGame')
+  init()
+}
+
+function joinGame() {
+  const code = gameCodeInput.innerHTML;
+  socket.emit('joinGame', code)
+  init()
+}
+
 var puck;
 var player;
 var gate1;
@@ -65,4 +76,8 @@ windowResized = function () {
 
 function updateGameState(gameState) {
   gameState = gameState;
+}
+
+function init() {
+  menu.style.display = 'none'
 }

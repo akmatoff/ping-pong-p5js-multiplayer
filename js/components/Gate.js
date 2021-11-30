@@ -13,7 +13,7 @@ function Gate(x, y, w, h) {
       object.y > this.y &&
       object.y < this.y + this.h
     ) {
-      playerScore1 += 1;
+      teamScore1 += 1;
       updateScore();
     }
 
