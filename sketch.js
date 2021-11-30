@@ -2,6 +2,8 @@
 
 const socket = io("http://localhost:5000")
 
+socket.on('gameCode', getGameCode)
+socket.on('playerNumber', getPlayerNumber)
 socket.on('gameState', updateGameState)
 
 function newGame() {
@@ -23,6 +25,7 @@ var gateHeight;
 var gateWidth;
 var fieldWidth;
 var fieldHeight;
+var playerNumber;
 
 var teamScore1 = 0;
 var teamScore2 = 0;
@@ -30,6 +33,7 @@ var teamScore2 = 0;
 var mouseSpeed = 0;
 
 var gameState = {}
+var gameCode;
 
 function setup() {
   fieldWidth = windowWidth - 30;
@@ -80,4 +84,13 @@ function updateGameState(gameState) {
 
 function init() {
   menu.style.display = 'none'
+}
+
+function getPlayerNumber(number) {
+  playerNumber = number;
+}
+
+function getGameCode(gameCode) {
+  gameCode = gameCode;
+  setGameCodeGUI(gameCode)
 }
