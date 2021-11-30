@@ -34,7 +34,6 @@ function Puck(x, y, d) {
 
   this.draw = () => {
 
-    
     this.vx *= this.friction;
     this.vy *= this.friction;
     

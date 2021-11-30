@@ -1,5 +1,9 @@
 /* eslint-disable no-undef, no-unused-vars */
 
+const socket = io("http://localhost:5000")
+
+socket.on('gameState', updateGameState)
+
 var puck;
 var player;
 var gate1;
@@ -9,10 +13,12 @@ var gateWidth;
 var fieldWidth;
 var fieldHeight;
 
-var playerScore1 = 0;
-var playerScore2 = 0;
+var teamScore1 = 0;
+var teamScore2 = 0;
 
 var mouseSpeed = 0;
+
+var gameState = {}
 
 function setup() {
   fieldWidth = windowWidth - 30;
@@ -56,3 +62,7 @@ windowResized = function () {
   fieldHeight = windowHeight - 30;
   resizeCanvas(fieldWidth, fieldHeight);
 };
+
+function updateGameState(gameState) {
+  gameState = gameState;
+}

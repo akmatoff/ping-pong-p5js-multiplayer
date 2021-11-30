@@ -12,19 +12,31 @@
       <div class="container flex-row" id="infoContainer">
         <div class="container inner flex-column">
           <h1>
-            Player 1 <br />
+            Team 1 <br />
             Score
           </h1>
-          <p class="score" id="playerScore1">0</p>
+          <p class="score" id="teamScore1">0</p>
         </div>
 
         <div class="container inner flex-column">
           <h1>
-            Player 2 <br />
+            Team 2 <br />
             Score
           </h1>
-          <p class="score" id="playerScore2">0</p>
+          <p class="score" id="teamScore2">0</p>
         </div>
+      </div>
+    </div>
+
+    <div class="wrapper flex-row centered" id="menu">
+      <div class="container flex-column" id="menu-inner">
+        <button class="menu-button" id="newGameButton">New Game</button>
+
+        <div class="game-input-container flex-row centered">
+          <input class="game-input" placeholder="CODE">
+          <button class="menu-button" id="joinGameButton">Join Game</button>
+        </div>
+        
       </div>
     </div>
 
@@ -35,6 +47,5 @@
     <script src="js/components/Gate.js"></script>
     <script src="sketch.js"></script>
     <script src="js/components/GUI.js"></script>
-    <script src="js/socket.js"></script>
   </body>
 </html>

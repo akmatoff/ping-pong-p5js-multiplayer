@@ -1,7 +1,7 @@
-const playerScore1Element = document.querySelector("#playerScore1");
-const playerScore2Element = document.querySelector("#playerScore2");
+const teamScore1Element = document.querySelector("#teamScore1");
+const teamScore2Element = document.querySelector("#teamScore2");
 
 function updateScore() {
-  playerScore1Element.innerHTML = playerScore1;
-  playerScore2Element.innerHTML = playerScore2;
+  teamScore1Element.innerHTML = teamScore1;
+  teamScore2Element.innerHTML = teamScore1;
 }
