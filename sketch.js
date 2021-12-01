@@ -80,6 +80,7 @@ windowResized = function () {
 
 function updateGameState(gameState) {
   gameState = gameState;
+  console.log(gameState)
 }
 
 function init() {
