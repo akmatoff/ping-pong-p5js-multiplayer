@@ -14,7 +14,7 @@ function updateScore() {
 }
 
 function setGameCodeGUI(gameCode) {
-  gameCodeGUI.innerHTML = gameCode;
+  gameCodeGUI.innerHTML = gameCode.trim();
 }
 
 joinGameButton.addEventListener('click', joinGame)
