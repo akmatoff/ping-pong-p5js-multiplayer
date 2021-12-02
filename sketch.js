@@ -78,9 +78,10 @@ windowResized = function () {
   resizeCanvas(fieldWidth, fieldHeight);
 };
 
-function updateGameState(gameState) {
-  gameState = gameState;
-  console.log(gameState)
+function updateGameState(newGameState) {
+  gameState = newGameState;
+  console.log(Object.values(gameState['players'][0])) 
+  socket.emit('newGameState', gameState, gameCode)
 }
 
 function init() {
